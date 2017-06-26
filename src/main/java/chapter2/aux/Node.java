@@ -16,8 +16,9 @@ public class Node<T> {
         return next;
     }
 
-    public void setNext(Node<T> next) {
+    public Node<T> setNext(Node<T> next) {
         this.next = next;
+        return this;
     }
 
     @Override
