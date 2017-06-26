@@ -12,6 +12,11 @@ public class Node<T> {
         return value;
     }
 
+    public Node<T> setValue(T value) {
+        this.value = value;
+        return this;
+    }
+
     public Node<T> getNext() {
         return next;
     }
