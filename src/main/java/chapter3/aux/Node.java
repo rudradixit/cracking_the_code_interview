@@ -44,25 +44,25 @@ public class Node<T> {
         }
         
         Node<T> otherNode = (Node<T>)other;
-        
-        if (
-            (value == null && otherNode.value != null) ||
-            (value != null && otherNode.value == null)
-           ) {
 
+        if (value == null && otherNode.value != null) {
             return false;
         }
-        
-        if (
-            (next == null && otherNode.next != null) ||
-            (next != null && otherNode.next == null)
-           ) {
 
+        if (value != null && otherNode.value == null) {
             return false;
         }
-        
-        return value.equals(otherNode.value) && 
-               next.equals(otherNode.next);
+
+        if (next == null && otherNode.next != null) {
+            return false;
+        }
+
+        if (next != null && otherNode.next == null) {
+            return false;
+        }
+
+        return (value == null && otherNode.value == null) ? true : value.equals(otherNode.value) &&
+               (next == null && otherNode.next == null) ? true : next.equals(otherNode.next);
     }
     
     @Override
