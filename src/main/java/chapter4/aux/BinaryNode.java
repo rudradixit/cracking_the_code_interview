@@ -9,6 +9,10 @@ public class BinaryNode<T> {
         this.value = value;
     }
 
+    public T getValue() {
+        return value;
+    }
+
     public BinaryNode<T> getLeft() {
         return left;
     }
