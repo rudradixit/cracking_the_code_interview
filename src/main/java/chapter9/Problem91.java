@@ -50,23 +50,23 @@ public class Problem91 {
         int sum = 0;
         
         for (TernaryNode<Integer> tree : trees) {
-            sum += countLeafNodes(tree, 0);
+            sum += countLeafNodes(tree);
         }
         
         return sum;
     }
     
-    private static int countLeafNodes(TernaryNode<Integer> node, int sum) {
+    private static int countLeafNodes(TernaryNode<Integer> node) {
         if (node == null) {
             return 0;
         }
         
         if (node.isLeaf()) {
-            return sum + 1;
+            return 1;
         }
         
-        return countLeafNodes(node.getLeft(), sum) + 
-            countLeafNodes(node.getMiddle(), sum) + 
-            countLeafNodes(node.getRight(), sum);
+        return countLeafNodes(node.getLeft()) +
+            countLeafNodes(node.getMiddle()) +
+            countLeafNodes(node.getRight());
     }
 }
