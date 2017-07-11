@@ -10,10 +10,6 @@ import java.util.List;
  * at a time. Implement a method to count how many possible ways the child can run up the stairs.
  */
 public class Problem91 {
-    private static int THREE = 3;
-    private static int TWO = 2;
-    private static int ONE = 1;
-
     public static int run(int n) {
         if (n < 1) {
             throw new IllegalArgumentException("Invalid number of steps!");
